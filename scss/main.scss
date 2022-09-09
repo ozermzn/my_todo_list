@@ -131,6 +131,9 @@ body {
       cursor: pointer;
       color: $secondary-color;
       column-rule-color: $black-color;
+      &:hover {
+        color: rgba($color: #eee, $alpha: 0.4);
+      }
     }
     span.active {
       color: $primary-color;

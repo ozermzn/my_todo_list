@@ -1,7 +1,4 @@
-let missions = [
-  { id: 1, missionName: "Mission one", situation: "pending" },
-  { id: 2, missionName: "Mission Two", situation: "completed" },
-];
+let missions = [];
 if (localStorage.getItem("missions") !== null) {
   missions = JSON.parse(localStorage.getItem("missions"));
 }
