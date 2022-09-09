@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+$primary-color: #f05454;
+$secondary-color: #dddddd;
+$third-color: #30475e;
+$grey-color: #dddddd;
+$black-color: #222831;
+$color-success: #03c4a1;
+$important-red: #84142d;
+$white-2-color: #faf5e4;
+
+//font
+$hand-write-font: "Dancing Script", cursive;
+
+body * {
+  z-index: 5;
+}
+
+body {
+  font-family: cursive;
+  color: $grey-color;
+  background-color: $third-color;
+  background: url(../img/bg-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .container-sm {
+    padding: 3rem 10rem;
+  }
+  .logo-pen {
+    color: $primary-color;
+  }
+  .form-label {
+    font-family: $hand-write-font;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .buttons {
+    vertical-align: center;
+    display: flex;
+    padding-top: 1rem;
+    padding-right: 3rem;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .btn-add {
+      color: #fff;
+      background-color: $color-success;
+      height: 45px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .btn-delete {
+      color: $grey-color;
+      background-color: $primary-color;
+    }
+    .btn-all-delete {
+      color: #fff;
+      background-color: $primary-color;
+      height: 45px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .input-icons {
+    display: flex;
+
+    i {
+      font-size: 20px;
+      padding: 7px;
+      color: $grey-color !important;
+    }
+
+    .input-value {
+      background-color: #eee;
+
+      border: none;
+    }
+  }
+
+  #task-list {
+    li {
+      padding: 1rem;
+      background-color: rgba($color: $third-color, $alpha: 0.4);
+      color: $black-color;
+    }
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .dropdown-toggle::after {
+        display: none;
+      }
+      label.checked {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+.dropdown-menu {
+  background-color: $black-color;
+
+  .del {
+    color: $primary-color;
+  }
+  .fix {
+    color: $color-success;
+  }
+}
+
+.controls {
+  .filters {
+    display: flex;
+    span {
+      padding: 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: $secondary-color;
+      column-rule-color: $black-color;
+    }
+    span.active {
+      color: $primary-color;
+    }
+  }
+}
+.p-empty {
+  color: $third-color;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+.card-header {
+  height: 5rem;
+  display: block;
+  overflow-y: hidden;
+}
+i.fa-solid.fa-ellipsis::before {
+  color: $black-color;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes vib {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//slide-up
+.wrapper {
+  height: 4rem;
+  display: block;
+  overflow-y: hidden;
+  text-align: center;
+  font-family: $hand-write-font;
+  .text {
+    color: #eee;
+    position: relative;
+    font-size: 3rem;
+    animation: slide-up 1.5s;
+    font-family: $hand-write-font;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 12px;
+  }
+  .buttons {
+    .btn {
+      height: 30px !important;
+      font-size: 8px;
+    }
+  }
+}

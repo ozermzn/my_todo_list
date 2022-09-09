@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Document</title>
+  </head>
+  <body style="height: 100%">
+    <div class="container-sm">
+      <div class="row">
+        <div class="col-12">
+          <div class="mb-3 logo text-center">
+            <i class="logo-pen fa-solid fa-pen fa-xl"></i>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputing" class="form-label">
+              <span class="wrapper"> <h1 class="text">Add a task</h1></span>
+              <span class="border-bottom"></span>
+            </label>
+            <div class="input-icons">
+              <input
+                type="text"
+                class="form-control input-value shadow-sm"
+                placeholder="Write something..."
+                id="taskInput"
+                onkeypress="enter(event)"
+              />
+              <span><i class="fa-solid fa-feather"></i></span>
+            </div>
+
+            <div class="buttons">
+              <button type="button" class="btn btn-add" id="btn-add">
+                Add
+              </button>
+
+              <div class="card-header controls">
+                <div class="filters sm">
+                  <span class="active" id="all">All</span>
+                  <span id="pending">Pending</span>
+                  <span id="completed">Completed</span>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-all-delete"
+                id="btn-delete-all"
+              >
+                Delete All
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card-header wrapper">
+            <h5 class="text">Your Missions</h5>
+          </div>
+          <div class="card" id="card">
+            <ul id="task-list" class="list-group list-group-flush"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
